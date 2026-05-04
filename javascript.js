@@ -24,4 +24,10 @@ function getHumanChoice() {
     return userChoice;
 }
 
-console.log(getHumanChoice());
+
+
+
+
+
+humanScore = 0;
+computerScore = 0;
