@@ -30,7 +30,7 @@ function capitalizeString(string) {
     // Capitalizes first letter int string
 
     let capitalizedString = string.charAt(0).toUpperCase() + string.slice(1);
-    return capitalizeString;
+    return capitalizedString;
 }
 
 
@@ -69,9 +69,9 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
-playRound(humanChoice, computerChoice);
+// const humanChoice = getHumanChoice();
+// const computerChoice = getComputerChoice();
+// playRound(humanChoice, computerChoice);
 
 humanScore = 0;
 computerScore = 0;
