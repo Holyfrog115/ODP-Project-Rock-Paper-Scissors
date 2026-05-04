@@ -26,8 +26,38 @@ function getHumanChoice() {
 }
 
 
+function playRound(humanChoice, computerChoice) {
+    // Plays a whole rock, paper, scissors round.
+    // Increments score of winner
+
+    if (humanChoice == computerChoice) {
+        // Capitalize
+        console.log(`Draw! ${humanChoice} = ${computerChoice}!`);
+    }
+    else if (humanChoice == "rock" && computerChoice == "scissors") {
+        console.log("You win! Rock beats Scissors!");
+    }
+    else if (humanChoice == "rock" && computerChoice == "paper") {
+        console.log("You lose! Paper beats Rock!");
+    }
+    else if (humanChoice == "paper" && computerChoice == "rock") {
+        console.log("You win! Paper beats Rock!");
+    }
+    else if (humanChoice == "paper" && computerChoice == "scissors") {
+        console.log("You lose! Scissors beat Paper!");
+    }
+    else if (humanChoice == "scissors" && computerChoice == "paper") {
+        console.log("You win! Scissors beat Paper!");
+    }
+    else if (humanChoice == "scissors" && computerChoice == "rock") {
+        console.log("You lose! Rock beats Scissors!");
+    }
+}
 
 
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+playRound(humanChoice, computerChoice);
 
 humanScore = 0;
 computerScore = 0;
