@@ -34,6 +34,24 @@ function capitalizeString(string) {
 }
 
 
+function declareWinner(humanScore, computerScore) {
+    // Declares winner of game and prints the message about it
+
+    if (humanScore > computerScore) {
+        console.log("You won this game!");
+        console.log(`Your score: ${humanScore} : Computer score: ${computerScore}`);
+    }
+    else if (humanScore < computerScore) {
+        console.log("You lost this game!");
+        console.log(`Your score: ${humanScore} : Computer score: ${computerScore}`);
+    }
+    else {
+        console.log("Draw!");
+        console.log(`Your score: ${humanScore} : Computer score: ${computerScore}`);
+    }
+}
+
+
 function playGame() {
     // Plays a complete game with 5 rounds
 
@@ -82,4 +100,8 @@ function playGame() {
 
         playRound(humanChoice, computerChoice);
     }
+
+    
 }
+
+playGame();
