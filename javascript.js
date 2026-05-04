@@ -26,6 +26,14 @@ function getHumanChoice() {
 }
 
 
+function capitalizeString(string) {
+    // Capitalizes first letter int string
+
+    let capitalizedString = string.charAt(0).toUpperCase() + string.slice(1);
+    return capitalizeString;
+}
+
+
 function playRound(humanChoice, computerChoice) {
     // Plays a whole rock, paper, scissors round.
     // Increments score of winner
