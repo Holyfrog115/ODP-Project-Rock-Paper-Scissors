@@ -39,8 +39,7 @@ function playRound(humanChoice, computerChoice) {
     // Increments score of winner
 
     if (humanChoice == computerChoice) {
-        // Capitalize
-        console.log(`Draw! ${humanChoice} = ${computerChoice}!`);
+        console.log(`Draw! ${capitalizeString(humanChoice)} = ${capitalizeString(computerChoice)}!`);
     }
     else if (humanChoice == "rock" && computerChoice == "scissors") {
         console.log("You win! Rock beats Scissors!");
@@ -68,10 +67,9 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-
-// const humanChoice = getHumanChoice();
-// const computerChoice = getComputerChoice();
-// playRound(humanChoice, computerChoice);
-
 humanScore = 0;
 computerScore = 0;
+
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+playRound(humanChoice, computerChoice);
