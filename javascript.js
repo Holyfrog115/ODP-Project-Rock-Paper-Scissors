@@ -20,10 +20,10 @@ function getHumanChoice() {
 
     let userChoice = "";
     userChoice = prompt("Enter your choice of rock, paper of scissors");
+    let loweredUserChoice = userChoice.toLowerCase();
 
-    return userChoice;
+    return loweredUserChoice;
 }
-
 
 
 
