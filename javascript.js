@@ -101,7 +101,7 @@ function playGame() {
         playRound(humanChoice, computerChoice);
     }
 
-    
+    declareWinner(humanScore, computerScore);    
 }
 
 playGame();
