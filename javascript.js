@@ -14,4 +14,14 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+
+function getHumanChoice() {
+    // Returns string with choice by user
+
+    let userChoice = "";
+    userChoice = prompt("Enter your choice of rock, paper of scissors");
+
+    return userChoice;
+}
+
+console.log(getHumanChoice());
