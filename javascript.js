@@ -1,3 +1,5 @@
+const playerChoice = '';
+
 function getComputerChoice() {
     // Generates random computer choice
 
@@ -15,12 +17,12 @@ function getComputerChoice() {
 }
 
 
-function getHumanChoice() {
+
+function getPlayerChoice() {
     // Returns string with choice by user
 
-    let userChoice = "";
-    userChoice = prompt("Enter your choice of rock, paper or scissors");
-    let loweredUserChoice = userChoice.toLowerCase();
+    const btns = document.querySelector('.playerButtons');
+    btns.addEventListener("click", )
 
     return loweredUserChoice;
 }
