@@ -1,4 +1,4 @@
-const playerChoice = '';
+let playerChoice = '';
 
 function getComputerChoice() {
     // Generates random computer choice
@@ -17,14 +17,14 @@ function getComputerChoice() {
 }
 
 
-
 function getPlayerChoice() {
     // Returns string with choice by user
 
     const btns = document.querySelector('.playerButtons');
-    btns.addEventListener("click", )
+    btns.addEventListener("click", (event) => {
+        playerChoice = event.target.id;
+    });
 
-    return loweredUserChoice;
 }
 
 
@@ -98,4 +98,4 @@ function playGame() {
     declareWinner(humanScore, computerScore);    
 }
 
-playGame();
+getPlayerChoice();
