@@ -57,30 +57,30 @@ function playGame() {
 
     getPlayerChoice();
     const message = document.querySelector('.gameInfo');
-    if (humanChoice === computerChoice) {
-        message.textContent(`Draw! ${capitalizeString(humanChoice)} = ${capitalizeString(computerChoice)}!`);
+    if (playerChoice === computerChoice) {
+        message.textContent(`Draw! ${capitalizeString(playerChoice)} = ${capitalizeString(computerChoice)}!`);
     }
-    else if (humanChoice === "rock" && computerChoice === "scissors") {
+    else if (playerChoice === "rock" && computerChoice === "scissors") {
         message.textContent("You win! Rock beats Scissors!");
         humanScore++;
     }
-    else if (humanChoice === "rock" && computerChoice === "paper") {
+    else if (playerChoice === "rock" && computerChoice === "paper") {
         message.textContent("You lose! Paper beats Rock!");
         computerScore++;
     }
-    else if (humanChoice === "paper" && computerChoice === "rock") {
+    else if (playerChoice === "paper" && computerChoice === "rock") {
         message.textContent("You win! Paper beats Rock!");
         humanScore++;
     }
-    else if (humanChoice === "paper" && computerChoice === "scissors") {
+    else if (playerChoice === "paper" && computerChoice === "scissors") {
         message.textContent("You lose! Scissors beat Paper!");
         computerScore++;
     }
-    else if (humanChoice === "scissors" && computerChoice === "paper") {
+    else if (playerChoice === "scissors" && computerChoice === "paper") {
         message.textContent("You win! Scissors beat Paper!");
         humanScore++;
     }
-    else if (humanChoice === "scissors" && computerChoice === "rock") {
+    else if (playerChoice === "scissors" && computerChoice === "rock") {
         message.textContent("You lose! Rock beats Scissors!");
         computerScore++;
     }
@@ -88,8 +88,6 @@ function playGame() {
 
     let humanScore = 0;
     let computerScore = 0;
-    let humanChoice = "";
-    let computerChoice = "";
 
     declareWinner(humanScore, computerScore);    
 }
