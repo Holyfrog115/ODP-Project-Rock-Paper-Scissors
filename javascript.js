@@ -93,14 +93,6 @@ function playGame() {
     let humanChoice = "";
     let computerChoice = "";
 
-
-    for (let i = 0; i < 5; i++) {
-        humanChoice = getHumanChoice();
-        computerChoice = getComputerChoice();
-
-        playRound(humanChoice, computerChoice);
-    }
-
     declareWinner(humanScore, computerScore);    
 }
 
