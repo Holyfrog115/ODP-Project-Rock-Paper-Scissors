@@ -18,13 +18,12 @@ function getComputerChoice() {
 
 
 function getPlayerChoice() {
-    // Returns string with choice by user
+    // Adds events to buttons for player choice
 
     const btns = document.querySelector('.playerButtons');
     btns.addEventListener("click", (event) => {
         playerChoice = event.target.id;
     });
-
 }
 
 
