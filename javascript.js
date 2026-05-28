@@ -85,7 +85,9 @@ function playGame() {
         if (playerScore >= 5 || computerScore >= 5) {
             declareWinner();
         }
-        playRound(playerChoice, computerChoice);
+        else {
+            playRound(playerChoice, computerChoice);
+        }
     });  
 }
 
