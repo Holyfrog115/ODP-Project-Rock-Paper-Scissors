@@ -26,20 +26,18 @@ function capitalizeString(string) {
 }
 
 
-function declareWinner(playerScore, computerScore) {
+function declareWinner() {
     // Declares winner of game and prints the message about it
 
+    const message = document.querySelector('.gameInfo');
     if (playerScore > computerScore) {
-        message.textContent = "You won this game!";
-        message.textContent = `Your score: ${playerScore} : Computer score: ${computerScore}`;
+        message.textContent = `You won this game!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
     }
     else if (playerScore < computerScore) {
-        message.textContent = "You lost this game!";
-        message.textContent = `Your score: ${playerScore} : Computer score: ${computerScore}`;
+        message.textContent = `You lost this game!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
     }
     else {
-        message.textContent = "Draw!";
-        message.textContent = `Your score: ${playerScore} : Computer score: ${computerScore}`;
+        message.textContent = `Draw!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
     }
 }
 
@@ -84,6 +82,9 @@ function playGame() {
     btns.addEventListener("click", (event) => {
         playerChoice = event.target.id;
         computerChoice = getComputerChoice();
+        if (playerScore >= 5 || computerScore >= 5) {
+            declareWinner();
+        }
         playRound(playerChoice, computerChoice);
     });  
 }
