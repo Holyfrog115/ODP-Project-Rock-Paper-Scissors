@@ -92,11 +92,24 @@ function playRound(playerChoice, computerChoice) {
 }
 
 
+function resetGame(event) {
+    const message = document.querySelector('.gameInfo');
+    message.textContent = 'Click on one of three buttons to start';
+
+    playerScore = 0;
+    computerScore = 0;
+    updateScore();
+
+    event.target.remove();
+}
+
+
 function addResetButton() {
     const mainSection = document.querySelector('.main');
     const resetButton = document.createElement('button');
     resetButton.textContent = 'Reset game';
     resetButton.classList.add('reset');
+    resetButton.addEventListener("click", resetGame);
 
     mainSection.appendChild(resetButton);
 }
