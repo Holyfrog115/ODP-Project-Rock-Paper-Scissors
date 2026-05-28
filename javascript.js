@@ -1,5 +1,3 @@
-let playerChoice = '';
-
 function getComputerChoice() {
     // Generates random computer choice
 
@@ -14,16 +12,6 @@ function getComputerChoice() {
     else {
         return "scissors";
     }
-}
-
-
-function getPlayerChoice() {
-    // Adds events to buttons for player choice
-
-    const btns = document.querySelector('.playerButtons');
-    btns.addEventListener("click", (event) => {
-        playerChoice = event.target.id;
-    });
 }
 
 
@@ -53,9 +41,9 @@ function declareWinner(humanScore, computerScore) {
 }
 
 
-function playGame() {
-
-    getPlayerChoice();
+function playRound(playerChoice, computerChoice) {
+    let humanScore = 0;
+    let computerScore = 0;
     const message = document.querySelector('.gameInfo');
     if (playerChoice === computerChoice) {
         message.textContent(`Draw! ${capitalizeString(playerChoice)} = ${capitalizeString(computerChoice)}!`);
@@ -84,12 +72,18 @@ function playGame() {
         message.textContent("You lose! Rock beats Scissors!");
         computerScore++;
     }
+}
 
+function playGame() {
+    let playerChoice = '';
+    let computerChoice = '';
 
-    let humanScore = 0;
-    let computerScore = 0;
-
-    declareWinner(humanScore, computerScore);    
+    const btns = document.querySelector('.playerButtons');
+    btns.addEventListener("click", (event) => {
+        playerChoice = event.target.id;
+        computerChoice = getComputerChoice();
+        playRound(playerChoice, computerChoice);
+    });  
 }
 
 playGame()
