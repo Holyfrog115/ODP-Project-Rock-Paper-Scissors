@@ -42,8 +42,7 @@ function declareWinner(humanScore, computerScore) {
 
 
 function playRound(playerChoice, computerChoice) {
-    let humanScore = 0;
-    let computerScore = 0;
+
     const message = document.querySelector('.gameInfo');
     if (playerChoice === computerChoice) {
         message.textContent = `Draw! ${capitalizeString(playerChoice)} = ${capitalizeString(computerChoice)}!`;
