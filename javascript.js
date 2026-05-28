@@ -26,6 +26,12 @@ function capitalizeString(string) {
 }
 
 
+function updateScore() {
+    const score = document.querySelector('.score');
+    score.textContent = `Your score: ${playerScore} : Computer score: ${computerScore}`;
+}
+
+
 function declareWinner() {
     // Declares winner of game and prints the message about it
 
@@ -87,6 +93,7 @@ function playRound(playerChoice, computerChoice) {
 function playGame() {
     let playerChoice = '';
     let computerChoice = '';
+    updateScore();
 
     const btns = document.querySelector('.playerButtons');
     btns.addEventListener("click", (event) => {
@@ -97,6 +104,7 @@ function playGame() {
         }
         else {
             playRound(playerChoice, computerChoice);
+            updateScore();
         }
     });  
 }
