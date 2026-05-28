@@ -38,15 +38,15 @@ function declareWinner() {
     const message = document.querySelector('.gameInfo');
     if (playerScore > computerScore) {
         message.setAttribute("id", "neutral")
-        message.textContent = `You won this game!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
+        message.textContent = "You won this game!";
     }
     else if (playerScore < computerScore) {
         message.setAttribute("id", "neutral")
-        message.textContent = `You lost this game!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
+        message.textContent = "You lost this game!";
     }
     else {
         message.setAttribute("id", "neutral")
-        message.textContent = `Draw!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
+        message.textContent = "Draw!";
     }
 }
 
@@ -99,12 +99,13 @@ function playGame() {
     btns.addEventListener("click", (event) => {
         playerChoice = event.target.id;
         computerChoice = getComputerChoice();
-        if (playerScore >= 5 || computerScore >= 5) {
-            declareWinner();
-        }
-        else {
+        if (playerScore < 5 && computerScore < 5) {
             playRound(playerChoice, computerChoice);
             updateScore();
+
+            if (playerScore >= 5 || computerScore >= 5) {
+                declareWinner();
+            }
         }
     });  
 }
