@@ -31,12 +31,15 @@ function declareWinner() {
 
     const message = document.querySelector('.gameInfo');
     if (playerScore > computerScore) {
+        message.setAttribute("id", "neutral")
         message.textContent = `You won this game!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
     }
     else if (playerScore < computerScore) {
+        message.setAttribute("id", "neutral")
         message.textContent = `You lost this game!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
     }
     else {
+        message.setAttribute("id", "neutral")
         message.textContent = `Draw!\nYour score: ${playerScore} : Computer score: ${computerScore}`;
     }
 }
@@ -46,29 +49,36 @@ function playRound(playerChoice, computerChoice) {
 
     const message = document.querySelector('.gameInfo');
     if (playerChoice === computerChoice) {
+        message.setAttribute("id", "neutral")
         message.textContent = `Draw! ${capitalizeString(playerChoice)} = ${capitalizeString(computerChoice)}!`;
     }
     else if (playerChoice === "rock" && computerChoice === "scissors") {
+        message.setAttribute("id", "win")
         message.textContent = "You win! Rock beats Scissors!";
         playerScore++;
     }
     else if (playerChoice === "rock" && computerChoice === "paper") {
+        message.setAttribute("id", "lose")
         message.textContent = "You lose! Paper beats Rock!";
         computerScore++;
     }
     else if (playerChoice === "paper" && computerChoice === "rock") {
+        message.setAttribute("id", "win")
         message.textContent = "You win! Paper beats Rock!";
         playerScore++;
     }
     else if (playerChoice === "paper" && computerChoice === "scissors") {
+        message.setAttribute("id", "lose")
         message.textContent = "You lose! Scissors beat Paper!";
         computerScore++;
     }
     else if (playerChoice === "scissors" && computerChoice === "paper") {
+        message.setAttribute("id", "win")
         message.textContent = "You win! Scissors beat Paper!";
         playerScore++;
     }
     else if (playerChoice === "scissors" && computerChoice === "rock") {
+        message.setAttribute("id", "lose")
         message.textContent = "You lose! Rock beats Scissors!";
         computerScore++;
     }

@@ -33,14 +33,14 @@ button {
     margin: 30px;
 }
 
-.win {
+#win {
     color: green;
 }
 
-.lose {
+#lose {
     color: red;
 }
 
-.neutral {
+#neutral {
     color: black;
 }
