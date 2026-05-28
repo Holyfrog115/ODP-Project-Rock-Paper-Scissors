@@ -27,16 +27,16 @@ function declareWinner(humanScore, computerScore) {
     // Declares winner of game and prints the message about it
 
     if (humanScore > computerScore) {
-        message.textContent("You won this game!");
-        message.textContent(`Your score: ${humanScore} : Computer score: ${computerScore}`);
+        message.textContent = "You won this game!";
+        message.textContent = `Your score: ${humanScore} : Computer score: ${computerScore}`;
     }
     else if (humanScore < computerScore) {
-        message.textContent("You lost this game!");
-        message.textContent(`Your score: ${humanScore} : Computer score: ${computerScore}`);
+        message.textContent = "You lost this game!";
+        message.textContent = `Your score: ${humanScore} : Computer score: ${computerScore}`;
     }
     else {
-        message.textContent("Draw!");
-        message.textContent(`Your score: ${humanScore} : Computer score: ${computerScore}`);
+        message.textContent = "Draw!";
+        message.textContent = `Your score: ${humanScore} : Computer score: ${computerScore}`;
     }
 }
 
@@ -46,30 +46,30 @@ function playRound(playerChoice, computerChoice) {
     let computerScore = 0;
     const message = document.querySelector('.gameInfo');
     if (playerChoice === computerChoice) {
-        message.textContent(`Draw! ${capitalizeString(playerChoice)} = ${capitalizeString(computerChoice)}!`);
+        message.textContent = `Draw! ${capitalizeString(playerChoice)} = ${capitalizeString(computerChoice)}!`;
     }
     else if (playerChoice === "rock" && computerChoice === "scissors") {
-        message.textContent("You win! Rock beats Scissors!");
+        message.textContent = "You win! Rock beats Scissors!";
         humanScore++;
     }
     else if (playerChoice === "rock" && computerChoice === "paper") {
-        message.textContent("You lose! Paper beats Rock!");
+        message.textContent = "You lose! Paper beats Rock!";
         computerScore++;
     }
     else if (playerChoice === "paper" && computerChoice === "rock") {
-        message.textContent("You win! Paper beats Rock!");
+        message.textContent = "You win! Paper beats Rock!";
         humanScore++;
     }
     else if (playerChoice === "paper" && computerChoice === "scissors") {
-        message.textContent("You lose! Scissors beat Paper!");
+        message.textContent = "You lose! Scissors beat Paper!";
         computerScore++;
     }
     else if (playerChoice === "scissors" && computerChoice === "paper") {
-        message.textContent("You win! Scissors beat Paper!");
+        message.textContent = "You win! Scissors beat Paper!";
         humanScore++;
     }
     else if (playerChoice === "scissors" && computerChoice === "rock") {
-        message.textContent("You lose! Rock beats Scissors!");
+        message.textContent = "You lose! Rock beats Scissors!";
         computerScore++;
     }
 }
