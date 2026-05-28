@@ -1,6 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
 
+
 function getComputerChoice() {
     // Generates random computer choice
 
@@ -90,6 +91,17 @@ function playRound(playerChoice, computerChoice) {
     }
 }
 
+
+function addResetButton() {
+    const mainSection = document.querySelector('.main');
+    const resetButton = document.createElement('button');
+    resetButton.textContent = 'Reset game';
+    resetButton.classList.add('reset');
+
+    mainSection.appendChild(resetButton);
+}
+
+
 function playGame() {
     let playerChoice = '';
     let computerChoice = '';
@@ -105,9 +117,11 @@ function playGame() {
 
             if (playerScore >= 5 || computerScore >= 5) {
                 declareWinner();
+                addResetButton();
             }
         }
     });  
 }
+
 
 playGame()
