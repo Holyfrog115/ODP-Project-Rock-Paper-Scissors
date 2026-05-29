@@ -1,3 +1,3 @@
 # Rock-Paper-Scissors game for ODP Project
 
-A rock paper scissors game with 3 buttons for player choice. After clicking one of three buttons the round will start and computer will choose a random option. Then choice are being compared and winner gets a +1 score. If choices are the same, it's a draw and no one is getting a score. After player or computer gets a score of 5, the winner is being declared and reset button appears, which is going to reset the whole game upon clicking.
+A rock paper scissors game with 3 buttons for player choice. After clicking one of three buttons the round will start and computer will choose a random option. Then choices are being compared and winner gets a +1 score. If choices are the same, it's a draw and no one is getting a score. After player or computer gets a score of 5, the winner is being declared and reset button appears, which is going to reset the whole game upon clicking.
